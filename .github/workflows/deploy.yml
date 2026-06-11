@@ -28,10 +28,15 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
+      - name: Prepare Pages artifact
+        env:
+          PRAETOR_PAGES_CNAME: ${{ vars.PRAETOR_PAGES_CNAME }}
+        run: sh ./scripts/prepare-pages-artifact.sh
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: .
+          path: ./dist
 
       - name: Deploy to GitHub Pages
         id: deployment
