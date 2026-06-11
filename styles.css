@@ -116,7 +116,7 @@ a {
   display: grid;
   grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.8fr);
   gap: 1.5rem;
-  align-items: stretch;
+  align-items: start;
 }
 
 .hero-copy,
@@ -226,7 +226,8 @@ h3 {
 .hero-panel {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 1.5rem;
   padding: 2rem;
   border-radius: var(--radius-xl);
   color: #f8f1e6;
