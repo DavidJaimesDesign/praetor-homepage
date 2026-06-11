@@ -14,8 +14,6 @@ done
 
 touch "$DIST_DIR/.nojekyll"
 
-DOMAIN_VALUE=${PRAETOR_PAGES_CNAME:-}
+DOMAIN_VALUE=${PRAETOR_PAGES_CNAME:-praetorhomesystems.com}
 
-if [ -n "$DOMAIN_VALUE" ]; then
-  printf '%s\n' "$DOMAIN_VALUE" > "$DIST_DIR/CNAME"
-fi
+printf '%s\n' "$DOMAIN_VALUE" > "$DIST_DIR/CNAME"

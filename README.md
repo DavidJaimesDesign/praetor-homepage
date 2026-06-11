@@ -23,14 +23,16 @@ docker compose up --build
 
 This repo includes a GitHub Actions workflow that deploys the static site to GitHub Pages on pushes to `main`.
 
-The workflow prepares a clean `dist/` artifact before upload. It copies the homepage assets, writes `.nojekyll`, and writes `CNAME` automatically when the repository variable `PRAETOR_PAGES_CNAME` is set.
+The workflow prepares a clean `dist/` artifact before upload. It copies the homepage assets, writes `.nojekyll`, and writes `CNAME` automatically for the production hostname `praetorhomesystems.com`.
 
 In GitHub repository settings:
 
 1. Open `Settings -> Pages`.
 2. Set `Source` to `GitHub Actions`.
 3. Merge or push the site changes to `main`.
-4. If you want a custom domain, add repository variable `PRAETOR_PAGES_CNAME` with the exact hostname, for example `home.example.com`.
+4. Set the custom domain to `praetorhomesystems.com`.
+
+If you ever need to test a different hostname temporarily, the artifact script still accepts `PRAETOR_PAGES_CNAME` as an override.
 
 If `gh` is not authenticated yet, run:
 
@@ -40,9 +42,10 @@ gh auth login -h github.com
 
 ## Cloudflare Follow-Up
 
-After the Pages site is live and you know the final hostname:
+After the Pages site is live:
 
-1. Confirm the same hostname appears in GitHub Pages as the custom domain.
-2. Create the matching `CNAME` record in Cloudflare pointing at `<your-github-pages-host>`.
-3. Keep Cloudflare SSL/TLS enabled and verify the hostname serves the Pages site successfully.
-4. If you want the apex domain as well, add the required redirect or alias setup in Cloudflare after the primary hostname works.
+1. Confirm `praetorhomesystems.com` appears in GitHub Pages as the custom domain.
+2. In Cloudflare, point the apex hostname `praetorhomesystems.com` at the GitHub Pages target using the GitHub-recommended DNS setup for apex domains.
+3. Optionally add `www.praetorhomesystems.com` as a `CNAME` to the same GitHub Pages target and redirect it to the apex host if you want a single canonical public URL.
+4. Leave unrelated service subdomains such as `legio-13.praetorhomesystems.com` unchanged. They can keep their own records and do not conflict with the website cutover.
+5. Keep Cloudflare SSL/TLS enabled and verify the hostname serves the Pages site successfully after DNS propagation.
