@@ -278,12 +278,25 @@ h3 {
   align-items: start;
 }
 
+.founder-grid {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.72fr) minmax(0, 1.28fr);
+  gap: 1.5rem;
+  align-items: center;
+}
+
 .about-copy {
   display: grid;
   gap: 1rem;
 }
 
+.founder-copy {
+  display: grid;
+  gap: 1rem;
+}
+
 .about-copy p,
+.founder-copy p,
 .contact-card p {
   margin: 0;
 }
@@ -298,6 +311,23 @@ h3 {
   border-radius: var(--radius-lg);
   border: 1px solid var(--line);
   background: linear-gradient(180deg, rgba(255, 253, 248, 0.92), rgba(246, 236, 220, 0.76));
+}
+
+.founder-portrait {
+  margin: 0;
+  padding: 0.8rem;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(255, 253, 248, 0.96), rgba(245, 235, 220, 0.84));
+  box-shadow: var(--shadow);
+}
+
+.founder-portrait img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: calc(var(--radius-xl) - 12px);
 }
 
 .contact-card {
@@ -381,6 +411,7 @@ h3 {
 @media (max-width: 900px) {
   .hero-grid,
   .about-grid,
+  .founder-grid,
   .footer {
     grid-template-columns: 1fr;
     flex-direction: column;
@@ -433,6 +464,10 @@ h3 {
   .section,
   .contact-card {
     border-radius: 26px;
+  }
+
+  .founder-portrait {
+    padding: 0.65rem;
   }
 
   h1 {
