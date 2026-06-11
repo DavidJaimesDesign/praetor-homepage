@@ -423,6 +423,25 @@ h3 {
   }
 }
 
+@media (min-width: 901px) {
+  .hero-grid {
+    align-items: stretch;
+  }
+
+  .hero-panel {
+    min-height: 100%;
+  }
+
+  .section-heading {
+    justify-items: center;
+    text-align: center;
+  }
+
+  .section-heading h2 {
+    max-width: 18ch;
+  }
+}
+
 @media (min-width: 901px) and (max-width: 1180px) {
   .hero-copy {
     padding: clamp(1.8rem, 4vw, 3rem);
