@@ -23,16 +23,26 @@ docker compose up --build
 
 This repo includes a GitHub Actions workflow that deploys the static site to GitHub Pages on pushes to `main`.
 
+The workflow prepares a clean `dist/` artifact before upload. It copies the homepage assets, writes `.nojekyll`, and writes `CNAME` automatically when the repository variable `PRAETOR_PAGES_CNAME` is set.
+
 In GitHub repository settings:
 
 1. Open `Settings -> Pages`.
 2. Set `Source` to `GitHub Actions`.
 3. Merge or push the site changes to `main`.
+4. If you want a custom domain, add repository variable `PRAETOR_PAGES_CNAME` with the exact hostname, for example `home.example.com`.
+
+If `gh` is not authenticated yet, run:
+
+```bash
+gh auth login -h github.com
+```
 
 ## Cloudflare Follow-Up
 
-After the Pages site is live:
+After the Pages site is live and you know the final hostname:
 
-1. Add the custom domain in GitHub Pages settings.
-2. Create the matching DNS record in Cloudflare.
-3. Enable Cloudflare SSL and confirm the hostname resolves to the Pages deployment.
+1. Confirm the same hostname appears in GitHub Pages as the custom domain.
+2. Create the matching `CNAME` record in Cloudflare pointing at `<your-github-pages-host>`.
+3. Keep Cloudflare SSL/TLS enabled and verify the hostname serves the Pages site successfully.
+4. If you want the apex domain as well, add the required redirect or alias setup in Cloudflare after the primary hostname works.
