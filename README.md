@@ -49,3 +49,5 @@ After the Pages site is live:
 3. Optionally add `www.praetorhomesystems.com` as a `CNAME` to the same GitHub Pages target and redirect it to the apex host if you want a single canonical public URL.
 4. Leave unrelated service subdomains such as `legio-13.praetorhomesystems.com` unchanged. They can keep their own records and do not conflict with the website cutover.
 5. Keep Cloudflare SSL/TLS enabled and verify the hostname serves the Pages site successfully after DNS propagation.
+
+For the full operator checklist, see `docs/workflows/cloudflare-cutover.md`.
