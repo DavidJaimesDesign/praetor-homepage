@@ -27,7 +27,7 @@ The user explicitly wants a simple homepage with an About section and a Contact 
 
 - R1. The site is a single homepage that can be deployed easily on GitHub Pages.
 - R2. The homepage includes an About section describing the business in language aligned with the strategy docs.
-- R3. The homepage includes a Contact section with phone `661 645 5615` and email `davidjaimesdesign@gmail.com`.
+- R3. The homepage includes a Contact section with phone `661 645 5615` and email `info@praetorhomesystems.com`.
 - R4. The visual design should feel premium, discreet, residential, and trustworthy for high-net-worth households and referral partners.
 - R5. The implementation should avoid unnecessary framework complexity for a simple marketing page.
 - R6. The repo should include a minimal deployment path and local preview/check workflow.
