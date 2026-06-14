@@ -1,16 +1,16 @@
 :root {
-  --bg: #f4efe6;
-  --bg-strong: #e9dfcf;
-  --panel: rgba(33, 30, 27, 0.78);
-  --panel-soft: rgba(255, 250, 242, 0.72);
-  --surface: rgba(255, 249, 239, 0.78);
-  --surface-strong: #fff9f0;
-  --text: #1f1b18;
-  --muted: #5f564d;
-  --line: rgba(61, 47, 33, 0.14);
-  --accent: #7a5c34;
-  --accent-deep: #4d3420;
-  --shadow: 0 30px 60px rgba(41, 27, 13, 0.14);
+  --bg: #f5f1e8;
+  --bg-strong: #d8d2c8;
+  --panel: rgba(18, 38, 58, 0.82);
+  --panel-soft: rgba(245, 241, 232, 0.72);
+  --surface: rgba(245, 241, 232, 0.8);
+  --surface-strong: #faf7f1;
+  --text: #12263a;
+  --muted: #2f343a;
+  --line: rgba(168, 137, 82, 0.18);
+  --accent: #a88952;
+  --accent-deep: #7f6841;
+  --shadow: 0 30px 60px rgba(18, 38, 58, 0.14);
   --radius-xl: 32px;
   --radius-lg: 24px;
   --radius-md: 18px;
@@ -31,9 +31,9 @@ body {
   font-family: "Manrope", "Avenir Next", "Segoe UI", sans-serif;
   color: var(--text);
   background:
-    radial-gradient(circle at top left, rgba(165, 130, 73, 0.22), transparent 28%),
-    radial-gradient(circle at 85% 12%, rgba(87, 67, 42, 0.14), transparent 20%),
-    linear-gradient(180deg, #f8f3ea 0%, #f3ede3 36%, #ece1d2 100%);
+    radial-gradient(circle at top left, rgba(168, 137, 82, 0.2), transparent 28%),
+    radial-gradient(circle at 85% 12%, rgba(122, 132, 120, 0.16), transparent 22%),
+    linear-gradient(180deg, #faf7f1 0%, #f5f1e8 38%, #d8d2c8 100%);
 }
 
 body::before {
@@ -45,8 +45,8 @@ body::before {
     linear-gradient(120deg, rgba(255, 255, 255, 0.18), transparent 30%),
     repeating-linear-gradient(
       135deg,
-      rgba(122, 92, 52, 0.03) 0,
-      rgba(122, 92, 52, 0.03) 1px,
+      rgba(168, 137, 82, 0.035) 0,
+      rgba(168, 137, 82, 0.035) 1px,
       transparent 1px,
       transparent 16px
     );
@@ -80,7 +80,7 @@ a {
   margin: 0 auto 1.5rem;
   border: 1px solid var(--line);
   border-radius: 999px;
-  background: rgba(255, 250, 242, 0.68);
+  background: rgba(245, 241, 232, 0.72);
   backdrop-filter: blur(18px);
 }
 
@@ -131,7 +131,7 @@ a {
   padding: clamp(2rem, 5vw, 4rem);
   border-radius: var(--radius-xl);
   background:
-    linear-gradient(155deg, rgba(255, 251, 245, 0.9), rgba(249, 240, 226, 0.82)),
+    linear-gradient(155deg, rgba(250, 247, 241, 0.92), rgba(216, 210, 200, 0.5)),
     var(--surface);
 }
 
@@ -232,13 +232,13 @@ h3 {
   border-radius: var(--radius-xl);
   color: #f8f1e6;
   background:
-    linear-gradient(180deg, rgba(38, 30, 24, 0.92), rgba(63, 47, 32, 0.9)),
+    linear-gradient(180deg, rgba(18, 38, 58, 0.94), rgba(47, 52, 58, 0.92)),
     var(--panel);
 }
 
 .panel-label {
   margin: 0 0 1rem;
-  color: rgba(255, 232, 202, 0.72);
+  color: rgba(216, 210, 200, 0.86);
 }
 
 .value-list {
@@ -249,14 +249,14 @@ h3 {
 }
 
 .value-list li {
-  color: rgba(255, 242, 225, 0.88);
+  color: rgba(245, 241, 232, 0.92);
 }
 
 .section {
   padding: clamp(2rem, 4vw, 3.2rem);
   margin-top: 1.5rem;
   border-radius: var(--radius-xl);
-  background: rgba(255, 250, 242, 0.72);
+  background: rgba(245, 241, 232, 0.76);
   backdrop-filter: blur(18px);
 }
 
@@ -310,7 +310,7 @@ h3 {
   padding: 1.5rem;
   border-radius: var(--radius-lg);
   border: 1px solid var(--line);
-  background: linear-gradient(180deg, rgba(255, 253, 248, 0.92), rgba(246, 236, 220, 0.76));
+  background: linear-gradient(180deg, rgba(250, 247, 241, 0.94), rgba(216, 210, 200, 0.42));
 }
 
 .founder-portrait {
@@ -318,7 +318,7 @@ h3 {
   padding: 0.8rem;
   border-radius: var(--radius-xl);
   border: 1px solid var(--line);
-  background: linear-gradient(180deg, rgba(255, 253, 248, 0.96), rgba(245, 235, 220, 0.84));
+  background: linear-gradient(180deg, rgba(250, 247, 241, 0.96), rgba(216, 210, 200, 0.48));
   box-shadow: var(--shadow);
 }
 
@@ -334,14 +334,14 @@ h3 {
   padding: clamp(1.6rem, 4vw, 2.4rem);
   border-radius: var(--radius-lg);
   background:
-    linear-gradient(180deg, rgba(44, 33, 24, 0.94), rgba(78, 56, 35, 0.9)),
+    linear-gradient(180deg, rgba(18, 38, 58, 0.96), rgba(47, 52, 58, 0.92)),
     var(--panel);
   color: #fffaf2;
 }
 
 .contact-card p {
   max-width: 38rem;
-  color: rgba(255, 243, 228, 0.82);
+  color: rgba(245, 241, 232, 0.84);
 }
 
 .contact-links {
@@ -357,8 +357,8 @@ h3 {
   min-height: 3.1rem;
   padding: 0.85rem 1.2rem;
   border-radius: 999px;
-  border: 1px solid rgba(255, 228, 196, 0.2);
-  background: rgba(255, 249, 241, 0.08);
+  border: 1px solid rgba(168, 137, 82, 0.28);
+  background: rgba(245, 241, 232, 0.08);
   color: #fffaf2;
   text-decoration: none;
   font-weight: 700;
