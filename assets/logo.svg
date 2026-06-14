@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 220" role="img" aria-labelledby="logo-title logo-desc">
+  <title id="logo-title">Praetor Home Systems logo</title>
+  <desc id="logo-desc">Praetor Home Systems wordmark with bronze roof line and ivory lettering.</desc>
+  <style>
+    .roof {
+      fill: none;
+      stroke: #a88952;
+      stroke-width: 9;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .wordmark {
+      fill: #f5f1e8;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 92px;
+      font-weight: 600;
+      letter-spacing: 14px;
+    }
+
+    .submark {
+      fill: #f5f1e8;
+      font-family: "Manrope", "Avenir Next", "Segoe UI", sans-serif;
+      font-size: 26px;
+      font-weight: 600;
+      letter-spacing: 16px;
+    }
+
+    .rule {
+      stroke: #a88952;
+      stroke-width: 3;
+      stroke-linecap: round;
+    }
+  </style>
+
+  <path class="roof" d="M176 58 L380 18 L584 58" />
+  <text class="wordmark" x="380" y="146" text-anchor="middle">PRAETOR</text>
+  <line class="rule" x1="92" y1="176" x2="152" y2="176" />
+  <text class="submark" x="380" y="184" text-anchor="middle">HOME SYSTEMS</text>
+  <line class="rule" x1="608" y1="176" x2="668" y2="176" />
+</svg>

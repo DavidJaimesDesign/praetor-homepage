@@ -21,12 +21,26 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <div class="page-shell">
+    <div class="page-shell" id="top">
       <header class="hero">
         <nav class="topbar" aria-label="Primary">
-          <p class="brand">Praetor Home Systems LLC</p>
+          <a class="brand" href="#top" aria-label="Praetor Home Systems home">
+            <svg
+              class="brand-logo"
+              viewBox="0 0 760 220"
+              role="img"
+              aria-label="Praetor Home Systems"
+            >
+              <path class="brand-logo-roof" d="M176 58 L380 18 L584 58" />
+              <text class="brand-logo-wordmark" x="380" y="146" text-anchor="middle">PRAETOR</text>
+              <line class="brand-logo-rule" x1="92" y1="176" x2="152" y2="176" />
+              <text class="brand-logo-submark" x="380" y="184" text-anchor="middle">HOME SYSTEMS</text>
+              <line class="brand-logo-rule" x1="608" y1="176" x2="668" y2="176" />
+            </svg>
+          </a>
           <div class="topbar-links">
             <a href="#about">About</a>
+            <a href="#founder">Founder</a>
             <a href="#contact">Contact</a>
           </div>
         </nav>
@@ -170,7 +184,7 @@
       </main>
 
       <footer class="footer">
-        <p>Praetor Home Systems LLC</p>
+        <a class="footer-brand" href="#top">Praetor Home Systems</a>
         <p class="footer-note">Private infrastructure. Quiet support. Long-term stewardship.</p>
       </footer>
     </div>
