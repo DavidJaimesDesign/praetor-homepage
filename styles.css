@@ -391,6 +391,50 @@ h3 {
   gap: 1rem;
 }
 
+.technology-intro {
+  max-width: 46rem;
+  margin: 0 auto 2rem;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  text-align: center;
+}
+
+.technology-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.technology-card {
+  padding: clamp(1.5rem, 3vw, 2rem);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(145deg, rgba(245, 241, 232, 0.12), rgba(122, 132, 120, 0.16)),
+    rgba(18, 38, 58, 0.62);
+}
+
+.technology-card h3 {
+  color: var(--surface-strong);
+}
+
+.technology-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.technology-card .technology-name {
+  margin-bottom: 0.85rem;
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
 .point-card {
   padding: 1.5rem;
   border-radius: var(--radius-lg);
@@ -465,6 +509,7 @@ h3 {
 .contact-links a {
   display: inline-flex;
   align-items: center;
+  max-width: 100%;
   min-height: 3.1rem;
   padding: 0.85rem 1.2rem;
   border-radius: 999px;
@@ -473,6 +518,7 @@ h3 {
   color: #fffaf2;
   text-decoration: none;
   font-weight: 700;
+  overflow-wrap: anywhere;
 }
 
 .footer {
@@ -530,6 +576,7 @@ h3 {
 @media (max-width: 900px) {
   .hero-grid,
   .about-grid,
+  .technology-grid,
   .founder-grid,
   .footer {
     grid-template-columns: 1fr;
@@ -593,6 +640,7 @@ h3 {
 
   .topbar-links {
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .hero-panel,
